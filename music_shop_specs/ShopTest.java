@@ -11,7 +11,7 @@ public class ShopTest {
 
   @Before
   public void before(){
-    shop = new Shop ("Obsolescence");
+    shop = new Shop("Obsolescence");
   }
 
   @Test
