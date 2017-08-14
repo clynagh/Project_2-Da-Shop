@@ -13,10 +13,15 @@ public class MusicFormatTest {
 
   @Before
   public void before(){
- cassette = new MusicFormat("Sonic Youth", "Sonic Death", MusicType.CASSETTE, 10, 20);
- compactDisc = new MusicFormat("Violent Femmes", "American People", MusicType.COMPACT_DISC, 8, 16);
- record = new MusicFormat("The Doors", "Morrison Hotel", MusicType.RECORD, 15, 30);
+ cassette = new MusicFormat(202, "Sonic Youth", "Sonic Death", MusicType.CASSETTE, 10, 20);
+ compactDisc = new MusicFormat(203, "Violent Femmes", "American People", MusicType.COMPACT_DISC, 8, 16);
+ record = new MusicFormat(204, "The Doors", "Morrison Hotel", MusicType.RECORD, 15, 30);
 
+  }
+
+  @Test
+  public void hadFormatId(){
+    assertEquals(204, record.getFormatId());
   }
 
   @Test
