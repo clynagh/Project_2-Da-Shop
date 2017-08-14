@@ -36,12 +36,12 @@ public class ShopTest {
     assertEquals("Sonic Death", shop.getAlbumNameFromStockList(202));
   }
 
-  // @Test
-  // public void canRemoveStockFromStockList(){
-  //   shop.addItemToStockList(202, "Sonic Death");
-  //   shop.removeItemFromStockList(202);
-  //   assertEquals(0, shop.countItems());
-  // }
+  @Test
+  public void canRemoveStockFromStockList(){
+    shop.addItemToStockList(202, "Sonic Death");
+    shop.removeItemFromStockList(202);
+    assertEquals(0, shop.countItems());
+  }
 
 
 }
