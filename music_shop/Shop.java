@@ -29,6 +29,10 @@ public class Shop {
     return this.stock.size();
   }
 
+  // public void removeItemFromStockList(Integer format_id){
+  //   return stock.remove(format_id);
+  // }
+
 }
 
 
