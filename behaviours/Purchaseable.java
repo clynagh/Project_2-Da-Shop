@@ -1,5 +1,5 @@
 package behaviours;
 
-public interface Sellable {
+public interface Purchaseable {
   int calculateMarkup();
 }
