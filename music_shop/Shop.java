@@ -1,20 +1,20 @@
-// package music_shop;
-// import java.util.ArrayList;
-// import behaviours.*;
+package music_shop;
+import java.util.ArrayList;
+import behaviours.*;
 
-// public class Shop {
+public class Shop {
 
-//   private String name;
-//   private ArrayList<Purchaseable> items;
+  private String name;
+  // private Map<KeyType, ValueType> stock;
 
-//   public Shop(String name){
-//     this.name = name;
-//     this.items = new ArrayList<Purchaseable>();
-//   }
+  public Shop(String name){
+    this.name = name;
+    // this.stock = new HashMap<KeyType, ValueType>();
+  }
 
-  // public String getName() {
-  //   return this.name;
-  // }
+  public String getName() {
+    return this.name;
+  }
 
   // public void addItem(Purchaseable item) {
   //   return this.items.add(items);
@@ -28,6 +28,6 @@
   //   return this.items.size();
   // }
 
-// }
+}
 
 

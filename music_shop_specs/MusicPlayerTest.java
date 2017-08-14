@@ -13,9 +13,14 @@ public class MusicPlayerTest {
 
   @Before
   public void before(){
-boombox = new MusicPlayer("Sony megabass", PlayerType.BOOMBOX, 100, 200);
-cdPlayer = new MusicPlayer("Cambridge Audio", PlayerType.CD_PLAYER, 150, 300);
-turntable = new MusicPlayer("Project", PlayerType.TURNTABLE, 200, 400);
+boombox = new MusicPlayer(101, "Sony megabass", PlayerType.BOOMBOX, 100, 200);
+cdPlayer = new MusicPlayer(102, "Cambridge Audio", PlayerType.CD_PLAYER, 150, 300);
+turntable = new MusicPlayer(103, "Project", PlayerType.TURNTABLE, 200, 400);
+  }
+
+  @Test
+  public void hasPlayerId(){
+    assertEquals(101, boombox.getPlayerId());
   }
 
   @Test
