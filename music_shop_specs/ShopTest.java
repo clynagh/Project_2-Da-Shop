@@ -18,17 +18,18 @@ public class ShopTest {
     assertEquals("Obsolescence", shop.getName());
   }
 
-  // @Test
-  // public void canAddItem() {
-  //   shop.addItem(cd);
-  //   assertEquals(1, stock.countItems());
-  // }
+  @Test
+  public void canAddStockToStockList(){
+    shop.addItemToStockList(202, "Sonic Death");
+    assertEquals("Sonic Death", shop.getAlbumNameFromStockList(202));
+  }
 
-  // @Test
-  // public void canRemoveItem() {
-  //   shop.addItem(cd);
-  //   shop.removeItem(cd);
-  //   assertEquals(0, shop.countItems());
-  // }
+  @Test
+  public void canCountStockInStockList(){
+    shop.addItemToStockList(202, "Sonic Death");
+    assertEquals(1, shop.countItems());
+  }
+
+
 }
 
