@@ -43,6 +43,5 @@ public class ShopTest {
     assertEquals(0, shop.countItems());
   }
 
-
 }
 
