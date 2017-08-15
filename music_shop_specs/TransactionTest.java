@@ -41,10 +41,11 @@ public class TransactionTest {
     assertEquals(0, shop.countItems());
   }
 
-  // @Test
-  // public void canAddStockToStockList(){
-  //   Transactions.addItemToStockList()
-  // }
+  @Test
+  public void canAddStockToStockList(){
+    Transactions.addItemToStockList(shop);
+    assertEquals(1, shop.countItems());
+  }
 
   // @Test
   // public void canAddStockToStockList(){

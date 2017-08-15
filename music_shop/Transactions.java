@@ -20,9 +20,9 @@ public class Transactions {
     shop.countItems();
   }
 
-  // public void addItemToStockList(Shop shop, ){
-  //   shop.addItemToStockList();
-  // }
+  public static void addItemToStockList(Shop shop){
+    shop.addItemToStockList(203, "Violent Femmes");
+  }
 
   // public String getAlbumNameFromStockList(Integer format_id){
   //   return stock.get(format_id);
