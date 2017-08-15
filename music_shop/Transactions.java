@@ -20,23 +20,21 @@ public class Transactions {
     shop.countItems();
   }
 
-  public static void addItemToStockList(Shop shop){
-    shop.addItemToStockList(203, "Violent Femmes");
+  public static void addItemToStockList(Shop shop, MusicFormat item){
+    shop.addItemToStockList(item);
   }
 
-  public static void addItemToPurchases(Customer customer){
-    customer.addItemToPurchases(203, "Violent Femmes");
+  public static void addItemToPurchases(Customer customer, MusicFormat item){
+    customer.addItemToPurchases(item.getFormatId(), item);
   }
 
-  public static void removeItemFromStockList(Shop shop){
-    shop.addItemToStockList(203, "Violent Femmes");
-    shop.removeItemFromStockList(203);
+  public static void removeItemFromStockList(Shop shop, MusicFormat item){
+    shop.removeItemFromStockList(item.getFormatId());
   }
 
-  public static void moveStockFromStockListToPurchases(Shop shop, Customer customer){
-    shop.addItemToStockList(203, "Violent Femmes");
-    shop.removeItemFromStockList(203);
-    customer.addItemToPurchases(203, "Violent Femmes");
+  public static void moveStockFromStockListToPurchases(Shop shop, Customer customer, MusicFormat item){
+    shop.removeItemFromStockList(item.getFormatId());
+    customer.addItemToPurchases(item.getFormatId(), item);
   }
 
   // public String getAlbumNameFromStockList(Integer format_id){

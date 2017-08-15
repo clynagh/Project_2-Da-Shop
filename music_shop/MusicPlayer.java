@@ -7,7 +7,6 @@ public class MusicPlayer extends StockItem implements Purchaseable {
   private String name;
   private PlayerType type;
 
-
   public MusicPlayer (int player_id, String name, PlayerType type, int wholesalePrice, int retailPrice){
     super(wholesalePrice, retailPrice);
     this.player_id = player_id;

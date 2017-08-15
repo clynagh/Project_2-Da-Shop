@@ -3,7 +3,6 @@ import org.junit.*;
 import music_shop.*;
 import behaviours.*;
 
-
 public class TransactionTest {
 
   Shop shop;
@@ -18,7 +17,6 @@ public class TransactionTest {
   MusicPlayer cdPlayer;
   MusicPlayer turntable;
   
-
   @Before
   public void before(){
     shop = new Shop("Obsolescence");
@@ -43,23 +41,23 @@ public class TransactionTest {
 
   @Test
   public void canAddStockToStockList(){
-    Transactions.addItemToStockList(shop);
+    Transactions.addItemToStockList(shop, compactDisc);
     assertEquals(1, shop.countItems());
   }
 
   @Test
   public void canAddItemToPurchases(){
-    Transactions.addItemToPurchases(customer);
+    Transactions.addItemToPurchases(customer, compactDisc);
     assertEquals(1, customer.countItems());
   }
 
   @Test
   public void canMoveStockFromStockListToPurchases(){
-    Transactions.addItemToStockList(shop);
+    Transactions.addItemToStockList(shop, cassette);
     assertEquals(1, shop.countItems());
-    Transactions.removeItemFromStockList(shop);
+    Transactions.removeItemFromStockList(shop, cassette);
     assertEquals(0, shop.countItems());
-    Transactions.addItemToPurchases(customer);
+    Transactions.addItemToPurchases(customer, cassette);
     assertEquals(1, customer.countItems());
     
   }

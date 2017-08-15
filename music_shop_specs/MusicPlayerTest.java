@@ -3,7 +3,6 @@ import org.junit.*;
 import music_shop.*;
 import behaviours.*;
 
-
 public class MusicPlayerTest {
 
   MusicPlayer musicPlayer;

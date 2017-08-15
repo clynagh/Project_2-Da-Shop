@@ -3,11 +3,10 @@ import behaviours.*;
 
 public class MusicFormat extends StockItem implements Purchaseable {
 
-  private int format_id;
-  private String artist;
-  private String album;
-  private MusicType type;
-
+  int format_id;
+  String artist;
+  String album;
+  MusicType type;
 
   public MusicFormat (int format_id, String artist, String album, MusicType type, int wholesalePrice, int retailPrice) {
     super(wholesalePrice, retailPrice);

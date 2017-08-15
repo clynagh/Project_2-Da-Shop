@@ -3,18 +3,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import behaviours.*;
 
-
 public class Customer {
   
   private String customer;
   private PaymentType type;
-  private HashMap<Integer, String> purchases;
-
+  private HashMap<Integer, MusicFormat> purchases;
 
   public Customer(String customer, PaymentType type){
     this.customer = customer;
     this.type = type;
-    this.purchases = new HashMap<Integer, String>();
+    this.purchases = new HashMap<Integer, MusicFormat>();
   }
 
   public String getName(){
@@ -25,12 +23,12 @@ public class Customer {
     return this.type;
   }
 
-  public void addItemToPurchases(Integer format_id, String album) {
-    purchases.put(format_id, album);
+  public void addItemToPurchases(Integer format_id, MusicFormat type) {
+    purchases.put(format_id, type);
   }
 
   public String getAlbumNameFromPurchases(Integer format_id){
-    return purchases.get(format_id);
+    return purchases.get(format_id).getAlbumName();
   }
 
   public int countItems() {
@@ -39,9 +37,5 @@ public class Customer {
 
   public void removeItemFromPurchases(Integer format_id){
     purchases.remove(format_id);
-
   }
-
-
-
 }
