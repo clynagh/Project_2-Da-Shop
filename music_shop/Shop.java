@@ -7,12 +7,12 @@ public class Shop {
 
   String name;
   HashMap<Integer, MusicFormat> stock;
-  Double totalfunds;
+  int totalfunds;
 
   public Shop(String name){
     this.name = name;
     this.stock = new HashMap<Integer, MusicFormat>();
-    this.totalfunds = 1000.00;
+    this.totalfunds = 1000;
   }
 
   public String getName() {
@@ -39,7 +39,30 @@ public class Shop {
   public void removeItemFromStockList(Integer format_id){
     stock.remove(format_id);
   }
+
+  public int getTotalFunds(){
+    return this.totalfunds;
+  }
+
+  public void addToTotalFunds(int amount){
+    this.totalfunds += amount;
+  }
+
+  public void minusFromTotalFunds(int amount){
+    this.totalfunds -= amount;
+  }
+
+ 
+
 }
+
+
+// for (Object value : map.values()) {
+// // ...
+// }
+
+// stock.put(type.getFormatId(), type);
+// return totalfunds + stock.get(type.format_id).getRetailPrice();
 
 
 

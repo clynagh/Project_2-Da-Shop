@@ -52,12 +52,12 @@ public class TransactionTest {
   }
 
   @Test
-  public void canMoveStockFromStockListToPurchases(){
-    Transactions.addItemToStockList(shop, cassette);
+  public void canMakeSale(){
+    shop.addItemToStockList(record);
     assertEquals(1, shop.countItems());
-    Transactions.removeItemFromStockList(shop, cassette);
+    Transactions.makeSale(shop, customer, record);
     assertEquals(0, shop.countItems());
-    Transactions.addItemToPurchases(customer, cassette);
     assertEquals(1, customer.countItems());
+    assertEquals(1030, shop.getTotalFunds());
   }
 }

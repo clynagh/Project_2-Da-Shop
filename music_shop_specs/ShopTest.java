@@ -53,8 +53,24 @@ public class ShopTest {
   @Test
   public void canReturnRetailPrice(){
     shop.addItemToStockList(record);
-    shop.getRetailPrice(record);
-    assertEquals(30, record.getRetailPrice());
+    assertEquals(30, shop.getRetailPrice(record));
+  }
+
+  @Test
+  public void canReturnTotalFunds(){
+    assertEquals(1000, shop.getTotalFunds());
+  }
+
+  @Test
+  public void canAddToFunds(){
+    shop.addToTotalFunds(30);
+    assertEquals(1030, shop.getTotalFunds());
+  }
+
+  @Test
+  public void canMinusFromFunds(){
+    shop.minusFromTotalFunds(30);
+    assertEquals(970, shop.getTotalFunds());
   }
 }
 

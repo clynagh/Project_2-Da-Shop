@@ -32,10 +32,17 @@ public class Transactions {
     shop.removeItemFromStockList(item.getFormatId());
   }
 
-  public static void moveStockFromStockListToPurchases(Shop shop, Customer customer, MusicFormat item){
+  public static void makeSale(Shop shop, Customer customer, MusicFormat item){
     shop.removeItemFromStockList(item.getFormatId());
     customer.addItemToPurchases(item.getFormatId(), item);
+    shop.addToTotalFunds(item.getRetailPrice());
   }
+
+  // public static void makeRefund(Shop shop, Customer customer, MusicFormat item){
+  //   customer.removeItemFromPurchases(item.getFormatId());
+  //   shop.addItemToStockList(item.getFormatId(), item);
+  //   shop.minusFromTotalFunds(item.getRetailPrice());
+  // }
 
   // public String getAlbumNameFromStockList(Integer format_id){
   //   return stock.get(format_id);
