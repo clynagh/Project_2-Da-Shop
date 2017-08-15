@@ -22,7 +22,6 @@ public class TransactionTest {
   @Before
   public void before(){
     shop = new Shop("Obsolescence");
-
     customer = new Customer("Jim", PaymentType.CASH);
     cassette = new MusicFormat(202, "Sonic Youth", "Sonic Death", MusicType.CASSETTE, 10, 20);
     compactDisc = new MusicFormat(203, "Violent Femmes", "American People", MusicType.COMPACT_DISC, 8, 16);
@@ -32,15 +31,25 @@ public class TransactionTest {
     turntable = new MusicPlayer(103, "Project", PlayerType.TURNTABLE, 200, 400);
   }
 
-
   @Test
   public void hasName(){
     assertEquals("Obsolescence", shop.getName());
   }
 
   @Test
-  public void canAddStockToStockList(){
-    shop.addItemToStockList(203, "Violent Femmes");
-    assertEquals("Violent Femmes", shop.getAlbumNameFromStockList(203));
+  public void canCountItems(){
+    assertEquals(0, shop.countItems());
   }
+
+  // @Test
+  // public void canAddStockToStockList(){
+  //   Transactions.addItemToStockList()
+  // }
+
+  // @Test
+  // public void canAddStockToStockList(){
+  //   Transactions.sellItem()
+  //   shop.addItemToStockList(203, "Violent Femmes");
+  //   assertEquals("Violent Femmes", shop.getAlbumNameFromStockList(203));
+  // }
 }

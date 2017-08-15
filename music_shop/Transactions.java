@@ -4,25 +4,35 @@ import behaviours.*;
 
 public class Transactions {
 
-  String shop;
-  HashMap<Integer, String> stock;
+  // String shop;
+  // HashMap<Integer, String> stock;
 
   public Transactions(){
-    this.shop = shop;
-    this.stock = new HashMap<Integer, String>();
+    // this.shop = shop;
+    // this.stock = new HashMap<Integer, String>();
   }
 
-  public String getName(){
-    return this.shop;
+  public static void getName(Shop shop){
+    shop.getName();
   }
 
-  public void addItemToStockList(Integer format_id, String album){
-    stock.put(format_id, album);
+  public static void countItems(Shop shop) {
+    shop.countItems();
   }
 
-  public String getAlbumNameFromStockList(Integer format_id){
-    return stock.get(format_id);
-  }
+  // public void addItemToStockList(Shop shop, ){
+  //   shop.addItemToStockList();
+  // }
+
+  // public String getAlbumNameFromStockList(Integer format_id){
+  //   return stock.get(format_id);
+  // }
+
+  // public static void sellItem(Shop shop, Customer customer){
+  //   shop.removeItemFromStockList()
+  //   customer.addItemToCustomer()
+
+  // }
 
 }
 
