@@ -47,6 +47,23 @@ public class TransactionTest {
     assertEquals(1, shop.countItems());
   }
 
+  @Test
+  public void canAddItemToPurchases(){
+    Transactions.addItemToPurchases(customer);
+    assertEquals(1, customer.countItems());
+  }
+
+  @Test
+  public void canMoveStockFromStockListToPurchases(){
+    Transactions.addItemToStockList(shop);
+    assertEquals(1, shop.countItems());
+    Transactions.removeItemFromStockList(shop);
+    assertEquals(0, shop.countItems());
+    Transactions.addItemToPurchases(customer);
+    assertEquals(1, customer.countItems());
+    
+  }
+
   // @Test
   // public void canAddStockToStockList(){
   //   Transactions.sellItem()

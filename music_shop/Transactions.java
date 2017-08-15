@@ -24,6 +24,21 @@ public class Transactions {
     shop.addItemToStockList(203, "Violent Femmes");
   }
 
+  public static void addItemToPurchases(Customer customer){
+    customer.addItemToPurchases(203, "Violent Femmes");
+  }
+
+  public static void removeItemFromStockList(Shop shop){
+    shop.addItemToStockList(203, "Violent Femmes");
+    shop.removeItemFromStockList(203);
+  }
+
+  public static void moveStockFromStockListToPurchases(Shop shop, Customer customer){
+    shop.addItemToStockList(203, "Violent Femmes");
+    shop.removeItemFromStockList(203);
+    customer.addItemToPurchases(203, "Violent Femmes");
+  }
+
   // public String getAlbumNameFromStockList(Integer format_id){
   //   return stock.get(format_id);
   // }
