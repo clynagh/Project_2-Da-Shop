@@ -32,25 +32,25 @@ public class CustomerTest {
 
   @Test
   public void canAddItemToPurchases(){
-    customer.addItemToPurchases(202, cassette);
+    customer.addItemToPurchases(cassette);
     assertEquals("Sonic Death", customer.getAlbumNameFromPurchases(202));
   }
 
   @Test
   public void canCountItemsInPurchases(){
-    customer.addItemToPurchases(202, cassette);
+    customer.addItemToPurchases(cassette);
     assertEquals(1, customer.countItems());
   }
 
   @Test
   public void canGetAlbumFromPurchases(){
-    customer.addItemToPurchases(202, cassette);
+    customer.addItemToPurchases(cassette);
     assertEquals("Sonic Death", customer.getAlbumNameFromPurchases(202));
   }
 
   @Test
   public void canRemoveItemFromPurchases(){
-    customer.addItemToPurchases(202, cassette);
+    customer.addItemToPurchases(cassette);
     customer.removeItemFromPurchases(202);
     assertEquals(0, customer.countItems());
   }

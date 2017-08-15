@@ -5,9 +5,9 @@ import behaviours.*;
 
 public class Customer {
   
-  private String customer;
-  private PaymentType type;
-  private HashMap<Integer, MusicFormat> purchases;
+  String customer;
+  PaymentType type;
+  HashMap<Integer, MusicFormat> purchases;
 
   public Customer(String customer, PaymentType type){
     this.customer = customer;
@@ -23,8 +23,8 @@ public class Customer {
     return this.type;
   }
 
-  public void addItemToPurchases(Integer format_id, MusicFormat type) {
-    purchases.put(format_id, type);
+  public void addItemToPurchases(MusicFormat type) {
+    purchases.put(type.getFormatId(), type);
   }
 
   public String getAlbumNameFromPurchases(Integer format_id){

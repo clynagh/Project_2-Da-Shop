@@ -25,7 +25,7 @@ public class Transactions {
   }
 
   public static void addItemToPurchases(Customer customer, MusicFormat item){
-    customer.addItemToPurchases(item.getFormatId(), item);
+    customer.addItemToPurchases(item);
   }
 
   public static void removeItemFromStockList(Shop shop, MusicFormat item){
@@ -34,15 +34,15 @@ public class Transactions {
 
   public static void makeSale(Shop shop, Customer customer, MusicFormat item){
     shop.removeItemFromStockList(item.getFormatId());
-    customer.addItemToPurchases(item.getFormatId(), item);
+    customer.addItemToPurchases(item);
     shop.addToTotalFunds(item.getRetailPrice());
   }
 
-  // public static void makeRefund(Shop shop, Customer customer, MusicFormat item){
-  //   customer.removeItemFromPurchases(item.getFormatId());
-  //   shop.addItemToStockList(item.getFormatId(), item);
-  //   shop.minusFromTotalFunds(item.getRetailPrice());
-  // }
+  public static void makeRefund(Customer customer, Shop shop, MusicFormat item){
+    customer.removeItemFromPurchases(item.getFormatId());
+    shop.addItemToStockList(item);
+    shop.minusFromTotalFunds(item.getRetailPrice());
+  }
 
   // public String getAlbumNameFromStockList(Integer format_id){
   //   return stock.get(format_id);

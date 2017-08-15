@@ -60,4 +60,14 @@ public class TransactionTest {
     assertEquals(1, customer.countItems());
     assertEquals(1030, shop.getTotalFunds());
   }
+
+  @Test
+  public void canMakeRefund(){
+    customer.addItemToPurchases(record);
+    assertEquals(1, customer.countItems());
+    Transactions.makeRefund(customer, shop, record);
+    assertEquals(0, customer.countItems());
+    assertEquals(1, shop.countItems());
+    assertEquals(970, shop.getTotalFunds());
+  }
 }
