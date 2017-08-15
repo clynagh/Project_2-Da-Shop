@@ -6,17 +6,22 @@ import behaviours.*;
 
 public class CustomerTest {
 
-  Customer customer;
-
+  private Customer customer;
+  private PaymentType type;
 
   @Before
   public void before(){
-    customer = new Customer("Jim");
+    customer = new Customer("Jim", PaymentType.CASH);
   }
 
   @Test
   public void hasName(){
     assertEquals("Jim", customer.getName());
+  }
+
+  @Test
+  public void hasPaymentType(){
+    assertEquals(PaymentType.CASH, customer.getPaymentType());
   }
 
   @Test
@@ -43,5 +48,4 @@ public class CustomerTest {
     customer.removeItemFromPurchases(202);
     assertEquals(0, customer.countItems());
   }
-
 }

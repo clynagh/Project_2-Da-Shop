@@ -5,8 +5,8 @@ import behaviours.*;
 
 public class Shop {
 
-  private String name;
-  private HashMap<Integer, String> stock;
+  String name;
+  HashMap<Integer, String> stock;
 
   public Shop(String name){
     this.name = name;

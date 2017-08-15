@@ -3,7 +3,6 @@
 ## Shop
 
 
-
 Goal: Practice OO modelling in Java (unit tests, no UI)
 
 You are required to build an app that allows a Shop to sell goods to a Customer. Stock and items are not important. 
@@ -30,9 +29,6 @@ The Customer must:
 ### Project Extensions
 
 * Add stock tracking
-
-
-
 
 
 ## General Rules (Applies to ALL projects)
