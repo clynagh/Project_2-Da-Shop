@@ -49,5 +49,12 @@ public class ShopTest {
     shop.removeItemFromStockList(202);
     assertEquals(0, shop.countItems());
   }
+
+  @Test
+  public void canReturnRetailPrice(){
+    shop.addItemToStockList(record);
+    shop.getRetailPrice(record);
+    assertEquals(30, record.getRetailPrice());
+  }
 }
 

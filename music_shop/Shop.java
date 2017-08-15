@@ -19,6 +19,11 @@ public class Shop {
     return this.name;
   }
 
+  public int getRetailPrice(MusicFormat type){
+    stock.put(type.getFormatId(), type);
+    return stock.get(type.format_id).getRetailPrice();
+  }
+
   public void addItemToStockList(MusicFormat type) {
     stock.put(type.getFormatId(), type);
   }

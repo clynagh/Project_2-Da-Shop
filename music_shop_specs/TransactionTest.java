@@ -59,13 +59,5 @@ public class TransactionTest {
     assertEquals(0, shop.countItems());
     Transactions.addItemToPurchases(customer, cassette);
     assertEquals(1, customer.countItems());
-    
   }
-
-  // @Test
-  // public void canAddStockToStockList(){
-  //   Transactions.sellItem()
-  //   shop.addItemToStockList(203, "Violent Femmes");
-  //   assertEquals("Violent Femmes", shop.getAlbumNameFromStockList(203));
-  // }
 }

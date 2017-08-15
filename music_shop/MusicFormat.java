@@ -32,6 +32,10 @@ public class MusicFormat extends StockItem implements Purchaseable {
     return this.type;
   }
 
+  public int getRetailPrice(){
+    return this.retailPrice;
+  }
+
   public int calculateMarkup(){
     return this.retailPrice - this.wholesalePrice;
   }

@@ -39,6 +39,11 @@ public class MusicFormatTest {
   }
 
   @Test
+  public void hasRetailPrice(){
+    assertEquals(30, record.getRetailPrice());
+  }
+
+  @Test
    public void canGetMarkup() {
      assertEquals(15, record.calculateMarkup());
    }
