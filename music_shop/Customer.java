@@ -42,4 +42,19 @@ public class Customer {
   public void removeItemFromPurchases(Integer format_id){
     purchases.remove(format_id);
   }
+
+  public int totalFundAvailable() {
+          int totalFundAvailable = 0;
+
+         for (int i = 0; i < wallet.size(); i++) {
+
+             HashMap<PaymentType, Integer> tempHashMap = this.wallet.get(i);
+              for (Integer f: tempHashMap.values()) {
+                  totalFundAvailable += f.intValue();
+              }
+
+         }
+
+         return totalFundAvailable;
+      }
 }

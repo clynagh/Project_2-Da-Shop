@@ -75,4 +75,9 @@ public class CustomerTest {
     customer.removeItemFromPurchases(202);
     assertEquals(0, customer.countItems());
   }
+
+  @Test
+    public void couldSumAvailableFund() {
+        assertEquals(850, customer.totalFundAvailable());
+    }
 }
