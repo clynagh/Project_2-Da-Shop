@@ -20,7 +20,7 @@ public class TransactionTest {
   @Before
   public void before(){
     shop = new Shop("Obsolescence");
-    customer = new Customer("Jim", PaymentType.CASH);
+    // customer = new Customer("Jim", PaymentType.CASH);
     cassette = new MusicFormat(202, "Sonic Youth", "Sonic Death", MusicType.CASSETTE, 10, 20);
     compactDisc = new MusicFormat(203, "Violent Femmes", "American People", MusicType.COMPACT_DISC, 8, 16);
     record = new MusicFormat(204, "The Doors", "Morrison Hotel", MusicType.RECORD, 15, 30);

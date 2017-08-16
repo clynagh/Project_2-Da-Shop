@@ -6,23 +6,25 @@ import behaviours.*;
 public class Customer {
   
   String customer;
-  PaymentType type;
+  // PaymentType type;
   HashMap<Integer, MusicFormat> purchases;
+  ArrayList<HashMap<PaymentType, Integer>> wallet;
 
-  public Customer(String customer, PaymentType type){
+  public Customer(String customer, ArrayList<HashMap<PaymentType, Integer>> wallet){
     this.customer = customer;
-    this.type = type;
+    // this.type = type;
     this.purchases = new HashMap<Integer, MusicFormat>();
+    this.wallet = new ArrayList<HashMap<PaymentType, Integer>>();
   }
 
   public String getName(){
     return this.customer;
   }
 
-  public PaymentType getPaymentType(){
-    return this.type;
+  public HashMap<PaymentType, Integer> getFirstPaymentType(){
+    return this.wallet.get(0);
   }
-
+  
   public void addItemToPurchases(MusicFormat type) {
     purchases.put(type.getFormatId(), type);
   }
