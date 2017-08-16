@@ -31,11 +31,11 @@ public class CustomerTest {
 
     jimwallet = new ArrayList<HashMap<PaymentType, Integer>>();
 
-    HashMap<PaymentType, Integer> cashAmount = new HashMap<PaymentType, Integer>();
+    cashAmount = new HashMap<PaymentType, Integer>();
     cashAmount.put(PaymentType.CASH, 150);
-    HashMap<PaymentType, Integer> creditCardAmount = new HashMap<PaymentType, Integer>();
+    creditCardAmount = new HashMap<PaymentType, Integer>();
     creditCardAmount.put(PaymentType.CREDIT_CARD, 450);
-    HashMap<PaymentType, Integer> debitCardAmount = new HashMap<PaymentType, Integer>();
+    debitCardAmount = new HashMap<PaymentType, Integer>();
     debitCardAmount.put(PaymentType.DEBIT_CARD, 250);
 
     jimwallet.add(cashAmount);
@@ -50,10 +50,10 @@ public class CustomerTest {
     assertEquals("Jim", customer.getName());
   }
 
-  // @Test
-  // public void hasWallet() {
-  //     assertEquals(jimWallet, toddy.getWallet());
-  // }
+  @Test
+  public void hasWallet() {
+      assertEquals(jimwallet, customer.getWallet());
+  }
 
   @Test
   public void hasPaymentType(){

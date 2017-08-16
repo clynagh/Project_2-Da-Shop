@@ -14,11 +14,15 @@ public class Customer {
     this.customer = customer;
     // this.type = type;
     this.purchases = new HashMap<Integer, MusicFormat>();
-    this.wallet = new ArrayList<HashMap<PaymentType, Integer>>();
+    this.wallet = wallet;
   }
 
   public String getName(){
     return this.customer;
+  }
+
+  public  ArrayList<HashMap<PaymentType, Integer>> getWallet() {
+      return this.wallet;
   }
 
   public HashMap<PaymentType, Integer> getFirstPaymentType(){
