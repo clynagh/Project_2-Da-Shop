@@ -6,13 +6,11 @@ import behaviours.*;
 public class Customer {
   
   String customer;
-  // PaymentType type;
   HashMap<Integer, MusicFormat> purchases;
   ArrayList<HashMap<PaymentType, Integer>> wallet;
 
   public Customer(String customer, ArrayList<HashMap<PaymentType, Integer>> wallet){
     this.customer = customer;
-    // this.type = type;
     this.purchases = new HashMap<Integer, MusicFormat>();
     this.wallet = wallet;
   }

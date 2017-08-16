@@ -4,12 +4,8 @@ import behaviours.*;
 
 public class Transactions {
 
-  // String shop;
-  // HashMap<Integer, String> stock;
-
   public Transactions(){
-    // this.shop = shop;
-    // this.stock = new HashMap<Integer, String>();
+
   }
 
   public static void getName(Shop shop){
@@ -43,17 +39,6 @@ public class Transactions {
     shop.addItemToStockList(item);
     shop.minusFromTotalFunds(item.getRetailPrice());
   }
-
-  // public String getAlbumNameFromStockList(Integer format_id){
-  //   return stock.get(format_id);
-  // }
-
-  // public static void sellItem(Shop shop, Customer customer){
-  //   shop.removeItemFromStockList()
-  //   customer.addItemToCustomer()
-
-  // }
-
 }
 
 

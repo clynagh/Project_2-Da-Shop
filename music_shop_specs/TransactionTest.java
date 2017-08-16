@@ -19,7 +19,6 @@ public class TransactionTest {
   MusicPlayer boombox;
   MusicPlayer cdPlayer;
   MusicPlayer turntable;
-  // Wallet jimwallet;
   ArrayList<HashMap<PaymentType, Integer>> jimwallet;
   HashMap<PaymentType, Integer> cashAmount;
   HashMap<PaymentType, Integer> creditCardAmount;

@@ -8,12 +8,10 @@ import java.util.HashMap;
 public class CustomerTest {
 
   Customer customer;
-  // PaymentType type;
   MusicFormat musicFormat;
   MusicFormat cassette;
   MusicFormat compactDisc;
   MusicFormat record;
-  // Wallet wallet;
   ArrayList<HashMap<PaymentType, Integer>> jimwallet;
   HashMap<PaymentType, Integer> cashAmount;
   HashMap<PaymentType, Integer> creditCardAmount;
@@ -22,26 +20,19 @@ public class CustomerTest {
   
   @Before
   public void before(){
-    // customer = new Customer("Jim", PaymentType.CASH);
     cassette = new MusicFormat(202, "Sonic Youth", "Sonic Death", MusicType.CASSETTE, 10, 20);
     compactDisc = new MusicFormat(203, "Violent Femmes", "American People", MusicType.COMPACT_DISC, 8, 16);
     record = new MusicFormat(204, "The Doors", "Morrison Hotel", MusicType.RECORD, 15, 30);
-
-
-
     jimwallet = new ArrayList<HashMap<PaymentType, Integer>>();
-
     cashAmount = new HashMap<PaymentType, Integer>();
     cashAmount.put(PaymentType.CASH, 150);
     creditCardAmount = new HashMap<PaymentType, Integer>();
     creditCardAmount.put(PaymentType.CREDIT_CARD, 450);
     debitCardAmount = new HashMap<PaymentType, Integer>();
     debitCardAmount.put(PaymentType.DEBIT_CARD, 250);
-
     jimwallet.add(cashAmount);
     jimwallet.add(creditCardAmount);
     jimwallet.add(debitCardAmount);
-
     customer = new Customer("Jim", jimwallet);
   }
 

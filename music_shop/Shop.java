@@ -51,18 +51,8 @@ public class Shop {
   public void minusFromTotalFunds(int amount){
     this.totalfunds -= amount;
   }
-
- 
-
 }
 
-
-// for (Object value : map.values()) {
-// // ...
-// }
-
-// stock.put(type.getFormatId(), type);
-// return totalfunds + stock.get(type.format_id).getRetailPrice();
 
 
 
